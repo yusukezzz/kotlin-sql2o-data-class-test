@@ -5,6 +5,9 @@ import org.sql2o.Sql2o
 import java.sql.DriverManager
 import javax.sql.DataSource
 
+annotation class NoArg
+
+@NoArg
 data class User(val id: Int, val name: String)
 
 fun main() {

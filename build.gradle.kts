@@ -1,5 +1,6 @@
 plugins {
-    kotlin("jvm") version "2.0.0"
+    kotlin("jvm") version "2.0.21"
+    kotlin("plugin.noarg") version "2.0.21"
 }
 
 group = "org.example"
@@ -10,7 +11,7 @@ repositories {
 }
 
 dependencies {
-    implementation("org.sql2o:sql2o:1.7.0")
+    implementation("org.sql2o:sql2o:1.8.0")
     implementation("com.h2database:h2:2.3.230")
     testImplementation(kotlin("test"))
 }
@@ -20,4 +21,7 @@ tasks.test {
 }
 kotlin {
     jvmToolchain(21)
+}
+noArg {
+    annotations("org.example.NoArg")
 }
